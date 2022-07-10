@@ -1,0 +1,50 @@
+.fourth_slide {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    .menu {
+        position: absolute;
+        padding: 20px;
+        left: 0;
+    }
+    .content {
+        padding: 50px 80px 50px 80px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .content_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 860px;
+            &_knowledge {
+                width: 1030px;
+                text-align: end;
+                &_title {
+                    @extend %header_two;
+                    margin-bottom: 15px;
+                }
+                p {
+                    @extend %paragraph;
+                }
+            }
+            &_buttons {
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+            }
+        }
+        .button {
+            @extend %button;
+            margin-top: 15px;
+        }
+        .frame {
+            padding: 25px;
+            border: 1px solid $first-color;
+        }
+    }
+}

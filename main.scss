@@ -1,0 +1,76 @@
+@import './base';
+@import './first';
+@import './second';
+@import './third';
+@import './fourth';
+@import './fifth';
+@import './sixth';
+@import './anim';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//Extends
+%header {
+    font-family: 'Forum', cursive;
+    letter-spacing: 8px;
+    font-size: 4rem;
+    line-height: 65px;
+    font-weight: 500;
+    color: $first-color;
+}
+
+%header_two {
+    font-family: 'Forum', cursive;
+    font-size: 1.8rem;
+    color: $first-color;
+    letter-spacing: 3px;
+}
+
+%paragraph {
+    font-family: 'Forum', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: $second-color;
+}
+
+%button {
+    border: 1px solid $first-color;
+    padding: 8px 1px;
+    letter-spacing: 2px;
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    transition: .3s;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    a {
+        color: $first-color;
+        text-decoration: none;
+    }
+}
+
+%links {
+    font-family: 'Forum', cursive;
+    display: flex;
+    padding: 20px;
+    width: 180px;
+    justify-content: space-between;
+    p {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: $first-color;
+    }
+    a {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: $second-color;
+        width: max-content;
+    }
+    a:hover {
+        color: $first-color;
+    }
+}

@@ -1,0 +1,59 @@
+.first_slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $background-color;
+    .portrait {
+        padding: 40px 76px 40px 0px;
+        img {
+            width: 608px;
+            height: 90vh;
+            vertical-align: bottom;
+        }
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80vh;
+        padding-left: 76px;
+        &_offer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            .button {
+                @extend %button;
+            }
+            p {
+                @extend %paragraph;
+            }
+            h1 {
+                @extend %header;
+            }
+        }
+        &_links {
+            flex-direction: column;
+            font-family: 'Forum', cursive;
+            color: $first-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 60px;
+            p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                color: $first-color;
+            }
+            a {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: $first-color;
+                width: max-content;
+            }
+        }
+    }
+}

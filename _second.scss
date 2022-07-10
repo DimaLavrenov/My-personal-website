@@ -1,0 +1,153 @@
+.second_slide {
+    height: 100vh;
+    overflow: hidden;
+    background-color: $background-color;
+    .menu {
+        position: absolute;
+        padding: 20px 0px 0px 20px;
+    }
+    .links {
+        @extend %links;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        &_additional {
+            .one {
+                width: 850px;
+                height: 350px;
+                border: 1px solid #232323;
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .two {
+                width: 950px;
+                height: 250px;
+                border: 1px solid #232323;
+                z-index: 0;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            .three {
+                width: 950px;
+                height: 250px;
+                border: 1px solid #232323;
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        &_text {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 170px;
+            p {
+                @extend %paragraph;
+            }
+            h1 {
+                @extend %header;
+            }
+        }
+        &_choice {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1200px;
+            height: 600px;
+            p {
+                @extend %header_two;
+            }
+            .prof {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 102%;
+                .frame {
+                    padding: 12px;
+                    border: 1px solid $second-color;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &_blackout {
+                        width: 95%;
+                        height: 96%;
+                        background-color: rgba($color: #000000, $alpha: .5);
+                        position: absolute;
+                        transition: .3s;
+                        top: 11px;
+                        left: 11px;
+                    }
+                    &_blackout:hover {
+                        background-color: transparent;
+                        transition: .3s;
+                        cursor: pointer;
+                        box-shadow: 0 0 10px #525252;
+                    }
+                    &_text {
+                        position: absolute;
+                        color: $first-color;
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid $second-color;
+                    }
+                }
+            }
+            .person {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 102%;
+                .frame {
+                    padding: 12px;
+                    border: 1px solid $second-color;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &_blackout {
+                        width: 95%;
+                        height: 96%;
+                        background-color: rgba($color: #000000, $alpha: .5);
+                        position: absolute;
+                        transition: .3s;
+                        top: 11px;
+                        left: 11px;
+                    }
+                    &_blackout:hover {
+                        background-color: transparent;
+                        transition: .3s;
+                        box-shadow: 0 0 10px #525252;
+                    }
+                    &_text {
+                        position: absolute;
+                        color: $first-color;
+                        letter-spacing: 2px;
+                        border-bottom: 1px solid $second-color;
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        @extend %header;
+        text-align: center;
+        width: 1100px;
+    }
+    p {
+        @extend %paragraph;
+    }
+}
